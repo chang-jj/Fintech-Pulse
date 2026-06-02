@@ -1,6 +1,6 @@
 {
-  "name": "Fintech News and Market Insights",
-  "description": "A modern, clean, and interactive fintech news and market insights portal covering crypto, payments, digital wallets, equities, and daily financial analysis.",
+  "name": "Fintech Pulse: Payments & Blockchains",
+  "description": "A modern, highly-polished news and insights portal covering consumer payments, digital wallets, and stablecoin blockchains.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

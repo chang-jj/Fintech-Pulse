@@ -28,7 +28,12 @@ import {
   Sliders,
   TrendingUp,
   TrendingDown,
-  Info
+  Info,
+  Share2,
+  Twitter,
+  Linkedin,
+  Copy,
+  Check
 } from "lucide-react";
 
 // Categorization Enums for strong typing
@@ -37,8 +42,6 @@ enum FintechCategory {
   PAYMENTS = "Payments",
   CRYPTO = "Crypto",
   WALLETS = "Digital Wallets",
-  EQUITIES = "Equities",
-  FINANCE = "Finance",
 }
 
 interface Article {
@@ -73,7 +76,7 @@ const ARTICLES_DATA: Article[] = [
       "However, payments infrastructure operates on delicate dynamics. Interchange fees directly fund the premium cashback and travel points systems that consumers heavily rely upon. If Visa and Mastercard's pricing power is blunted by secondary networks like Discover or Shazam, the economic engine driving credit rewards could seize up, forcing a massive migration back to debit or digital wallets.",
       "For fintech platforms, this presents a dual threat and opportunity. While payment gateways must immediately build multi-routing fallback modules, alternative network protocols (such as RTP/FedNow or stablecon-based rails) gain an unprecedented wedge into traditional retail terminals."
     ],
-    tags: ["CCCA", "Interchange", "Visa", "Mastercard", "Regulation"],
+    tags: ["CCCA", "Interchange", "Visa", "Mastercard", "Regulation", "A2A Payments", "Open Banking"],
     riskFactor: "Medium",
     growthPotential: "Moderate",
     catalysts: [
@@ -97,7 +100,7 @@ const ARTICLES_DATA: Article[] = [
       "The driver of this growth is not DeFi speculation, but B2B cross-border payments. Importing and exporting merchants in fast-growth economies are increasingly bypassing the SWIFT network's 3-day delays and correspondent bank margins in favor of immediate, 24/7 stablecoin rails on high-throughput networks (L2s).",
       "Traditional payment service providers (PSPs) are quickly adapting. Acquiring giants like Stripe and Adyen have embedded stablecoin auto-settlement modules, transforming what once was a parallel financial system into a high-utility plug-in for global e-commerce."
     ],
-    tags: ["Stablecoins", "USDC", "USDT", "Cross-Border Settlement", "Stripe"],
+    tags: ["Stablecoins", "USDC", "USDT", "Cross-Border Settlement", "Stripe", "Embedded Finance", "Regulation"],
     riskFactor: "High",
     growthPotential: "Aggressive",
     catalysts: [
@@ -121,7 +124,7 @@ const ARTICLES_DATA: Article[] = [
       "PSD3's new open-banking provisions are acting as a catalyst. By clarifying SCA (Strong Customer Authentication) requirements and lowering developer barriers to account access, European banks can now bypass legacy card networks entirely.",
       "Merchants are the key battleground. By offering lower processing costs (typically under 0.20% for A2A compared to 1.5% for credit cards), Wero hopes to incentivize merchants to display its QR codes at physical points-of-sale, though displacing the slick biometric tap-to-pay of mobile wallets remains a monumental hurdle."
     ],
-    tags: ["Wero", "PSD3", "Open Banking", "A2A Payments", "Apple Pay"],
+    tags: ["Wero", "PSD3", "Open Banking", "A2A Payments", "Apple Pay", "Regulation"],
     riskFactor: "Low",
     growthPotential: "Moderate",
     catalysts: [
@@ -131,109 +134,8 @@ const ARTICLES_DATA: Article[] = [
     ],
     impactScore: 74,
     sentiment: "Neutral"
-  },
-  {
-    id: "art-04",
-    category: FintechCategory.EQUITIES,
-    title: "Valuation Divergence: Legacy Merchant Processors vs. API-First Payment Providers",
-    author: "Richard Chen, Senior Equity Analyst",
-    date: "May 25, 2026",
-    readTime: "7 min read",
-    excerpt: "Comparing the P/E compressions of veteran merchant aggregators like FIS and Fiserv against Adyen's premium multiples. Has API-driven flexibility permanently won the stack?",
-    content: [
-      "For decades, the payments industry was dominated by massive, consolidated merchant acquiring engines. These conglomerates integrated millions of retail terminals and processed huge volumes, but were built on a precarious stack of legacy mainframes and acquisitions.",
-      "Q1 2026 earnings highlight a stark valuation divergence. Legacy processors are trading near historical lows of 9-11x forward earnings, while API-first orchestration layers (Adyen, Stripe) sustain multiples above 35x. The market has realized that transaction volume is no longer a protective moat—platform flexibility is.",
-      "The rise of software-led payments (ISVs) means that platforms like Shopify, Toast, and Mindbody act as the true gatekeepers of merchant relationships. Legacy processors who failed to build embedded-finance modules are being relegated to low-margin commoditized rails, while modern aggregators extract premium monetization on value-added services."
-    ],
-    tags: ["Adyen", "Fiserv", "FIS", "Shopify", "Embedded Finance"],
-    riskFactor: "Low",
-    growthPotential: "Conservative",
-    catalysts: [
-      "Adyen expanding multi-license merchant bank services in North America.",
-      "Fiserv pivoting resources to their Clover POS platform expansion.",
-      "Embedded SaaS-checkout modules grabbing 60% of small business market."
-    ],
-    impactScore: 81,
-    sentiment: "Bullish"
-  },
-  {
-    id: "art-05",
-    category: FintechCategory.FINANCE,
-    title: "High-Yield Arbitrage: How Neobanks are Utilizing Reverse Repo to Challenge Wall Street",
-    author: "David Kessler, Macro Strategist",
-    date: "May 20, 2026",
-    readTime: "5 min read",
-    excerpt: "With interest rates stabilizing near 5%, consumer fintech apps are using wholesale-style Treasury pipelines to offer high yields without risking credit underwriting.",
-    content: [
-      "Neobanks and digital investment brokers (Wealthfront, Robinhood, Wise) are achieving record deposits. By partnering with specialist banking-as-a-service (BaaS) entities, they route retail consumer deposits directly to high-yield Treasury bills and Federal Reserve reverse repo pools.",
-      "This mechanism bypasses the costly branches, real estate, and massive overheads of traditional commercial banking. While regional banks struggle to maintain deposits at 0.5% interest, digital challengers are easily passing through yields up to 4.5% - 5.0% while skimming a low-risk, capital-light transactional spread.",
-      "This asset-light model forces a deep question: Is the classic deposit-to-credit bank model structurally obsolete for consumers? Without credit default risk on their balance sheets, fintechs can maintain pristine solvency frameworks, though they remain heavily reliant on Fed rate cuts."
-    ],
-    tags: ["Neobanks", "Yield Arbitrage", "Treasuries", "Robinhood", "BaaS"],
-    riskFactor: "Medium",
-    growthPotential: "Moderate",
-    catalysts: [
-      "Regional bank deposit outflows reaching positive digital flow equilibrium.",
-      "BaaS regulatory audits tightening third-party programmatic ledger controls.",
-      "Federal Reserve hinting at stable-rate thresholds for next 3 quarters."
-    ],
-    impactScore: 85,
-    sentiment: "Bullish"
   }
 ];
-
-// Interactive Market Chart Mock Data representing realistic values and histories
-interface ChartDataPoint {
-  date: string;
-  crypto: number;      // Stablecoin / Bitcoin Index (base 100)
-  payments: number;    // Visa / Adyen Index (base 100)
-  wallets: number;     // Block / PayPal Index (base 100)
-  equities: number;    // Fintech Equity Index (base 100)
-  volume: number;      // Billions of USD Global Rail volume
-}
-
-const CHART_HISTORY: Record<string, ChartDataPoint[]> = {
-  "1D": Array.from({ length: 12 }, (_, i) => ({
-    date: `${i * 2 + 1}:00`,
-    crypto: 124.5 + Math.sin(i * 0.8) * 1.5 + (i * 0.1),
-    payments: 98.2 + Math.cos(i * 0.5) * 0.8,
-    wallets: 86.4 + Math.sin(i * 0.3) * 1.2,
-    equities: 110.8 + Math.cos(i * 0.7) * 1.1 + (i * 0.15),
-    volume: 120 + i * 8 + Math.random() * 5
-  })),
-  "1W": [
-    { date: "Mon", crypto: 121.2, payments: 97.4, wallets: 84.1, equities: 108.4, volume: 410 },
-    { date: "Tue", crypto: 123.5, payments: 96.9, wallets: 85.3, equities: 107.9, volume: 425 },
-    { date: "Wed", crypto: 122.1, payments: 98.1, wallets: 84.8, equities: 109.1, volume: 430 },
-    { date: "Thu", crypto: 125.8, payments: 99.3, wallets: 86.6, equities: 111.4, volume: 452 },
-    { date: "Fri", crypto: 124.2, payments: 98.0, wallets: 85.9, equities: 110.5, volume: 440 },
-    { date: "Sat", crypto: 126.9, payments: 98.5, wallets: 87.2, equities: 112.1, volume: 380 },
-    { date: "Sun", crypto: 125.4, payments: 98.2, wallets: 86.4, equities: 110.8, volume: 395 }
-  ],
-  "1M": [
-    { date: "Week 1", crypto: 115.2, payments: 94.2, wallets: 81.3, equities: 102.5, volume: 1650 },
-    { date: "Week 2", crypto: 119.4, payments: 95.8, wallets: 83.1, equities: 104.9, volume: 1720 },
-    { date: "Week 3", crypto: 121.8, payments: 96.3, wallets: 85.0, equities: 108.2, volume: 1810 },
-    { date: "Week 4", crypto: 125.4, payments: 98.2, wallets: 86.4, equities: 110.8, volume: 1890 }
-  ],
-  "1Y": [
-    { date: "Q1 '25", crypto: 95.0, payments: 88.0, wallets: 75.2, equities: 90.5, volume: 5120 },
-    { date: "Q2 '25", crypto: 102.4, payments: 91.2, wallets: 78.4, equities: 96.2, volume: 5400 },
-    { date: "Q3 '25", crypto: 108.9, payments: 93.5, wallets: 80.9, equities: 99.8, volume: 5650 },
-    { date: "Q4 '25", crypto: 116.5, payments: 95.0, wallets: 82.1, equities: 104.3, volume: 5900 },
-    { date: "Q1 '26", crypto: 125.4, payments: 98.2, wallets: 86.4, equities: 110.8, volume: 6310 }
-  ]
-};
-
-// Details for the Interactive Market Grid tickers (updates dynamically with soft mock ticks)
-interface AssetTicker {
-  symbol: string;
-  name: string;
-  price: string;
-  change: string;
-  isPositive: boolean;
-  history: number[];
-}
 
 // Payment Rails flow visualizer options
 enum PaymentRailType {
@@ -279,6 +181,19 @@ export default function App() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   const [savedArticles, setSavedArticles] = useState<string[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeShareId, setActiveShareId] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  // Close share dropdown on document click
+  useEffect(() => {
+    const handleDocumentClick = () => {
+      setActiveShareId(null);
+    };
+    document.addEventListener("click", handleDocumentClick);
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -288,12 +203,6 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
-  // Chart interaction state
-  const [chartAsset, setChartAsset] = useState<"crypto" | "payments" | "wallets" | "equities">("payments");
-  const [chartTimeframe, setChartTimeframe] = useState<string>("1W");
-  const [hoveredPoint, setHoveredPoint] = useState<ChartDataPoint | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   // Flow simulator state
   const [selectedRail, setSelectedRail] = useState<PaymentRailType>(PaymentRailType.CREDIT_CARD);
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
@@ -303,42 +212,6 @@ export default function App() {
   const [avgTicketSize, setAvgTicketSize] = useState<number>(85); // USD
   const [customCCRate, setCustomCCRate] = useState<number>(2.4); // Percentage
   const [customRTPRate, setCustomRTPRate] = useState<number>(0.2); // flat rate or low A2A %
-
-  // Dynamic live-updating tickers (simulates micro-movements on interval)
-  const [tickers, setTickers] = useState<AssetTicker[]>([
-    { symbol: "$PYMT", name: "Apex Payments Index", price: "284.15", change: "+1.85", isPositive: true, history: [280, 281, 280.5, 283, 282, 284.15] },
-    { symbol: "$USDC", name: "USD Settlement Velocity", price: "4,192.40", change: "+3.24", isPositive: true, history: [4120, 4150, 4130, 4180, 4160, 4192.4] },
-    { symbol: "V", name: "Visa Inc.", price: "278.41", change: "-0.42", isPositive: false, history: [280, 279, 279.5, 278, 278.9, 278.41] },
-    { symbol: "ADYEN", name: "Adyen NV", price: "1,524.00", change: "+4.12", isPositive: true, history: [1490, 1505, 1500, 1520, 1515, 1524] },
-    { symbol: "SQ", name: "Block (Square)", price: "72.35", change: "+0.95", isPositive: true, history: [71, 71.8, 71.2, 72.5, 72.1, 72.35] }
-  ]);
-
-  // Periodic visual price fluctuation simulator
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTickers((prev) =>
-        prev.map((t) => {
-          if (t.symbol === "$USDC") return t; // Stablecoin is static or volume index
-          const currentPrice = parseFloat(t.price.replace(/,/g, ""));
-          const pct = (Math.random() - 0.48) * 0.002; // soft upward drift
-          const nextPrice = currentPrice * (1 + pct);
-          const rawDiff = nextPrice - currentPrice;
-          const nextChangeRaw = parseFloat(t.change) + rawDiff;
-          const isPos = nextChangeRaw >= 0;
-
-          return {
-            ...t,
-            price: nextPrice.toFixed(2),
-            change: (isPos ? "+" : "") + nextChangeRaw.toFixed(2),
-            isPositive: isPos,
-            history: [...t.history.slice(1), nextPrice]
-          };
-        })
-      );
-    }, 4500);
-
-    return () => clearInterval(timer);
-  }, []);
 
   // Filtered news listing
   const filteredArticles = useMemo(() => {
@@ -353,12 +226,66 @@ export default function App() {
     });
   }, [selectedCategory, searchQuery]);
 
+  // Recommended articles for detailed modal (matching >= 2 tags)
+  const recommendedArticles = useMemo(() => {
+    if (!selectedArticle) return [];
+    return ARTICLES_DATA.filter((article) => {
+      if (article.id === selectedArticle.id) return false;
+      const currentTags = selectedArticle.tags || [];
+      const articleTags = article.tags || [];
+      const sharedCount = currentTags.filter((tag) => articleTags.includes(tag)).length;
+      return sharedCount >= 2;
+    });
+  }, [selectedArticle]);
+
+  // Scroll modal scrollable container to top on selection change
+  useEffect(() => {
+    if (selectedArticle) {
+      const scrollBox = document.getElementById("article-modal-scrollable-content");
+      if (scrollBox) {
+        scrollBox.scrollTop = 0;
+      }
+    }
+  }, [selectedArticle]);
+
   // Read saved bookmarks from dynamic array
   const toggleBookmark = (id: string, e: MouseEvent) => {
     e.stopPropagation();
     setSavedArticles((prev) =>
       prev.includes(id) ? prev.filter((artId) => artId !== id) : [...prev, id]
     );
+  };
+
+  const handleShareClick = (id: string, e: MouseEvent) => {
+    e.stopPropagation();
+    setActiveShareId((prev) => (prev === id ? null : id));
+  };
+
+  const handleCopyLink = (article: Article, e: MouseEvent) => {
+    e.stopPropagation();
+    const shareUrl = `${window.location.origin}${window.location.pathname}?article=${article.id}`;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopiedId(article.id);
+      setTimeout(() => setCopiedId(null), 2000);
+    }).catch((err) => {
+      console.error("Could not copy link:", err);
+    });
+  };
+
+  const handleShareSocial = (article: Article, platform: "twitter" | "linkedin", e: MouseEvent) => {
+    e.stopPropagation();
+    const shareUrl = `${window.location.origin}${window.location.pathname}?article=${article.id}`;
+    const text = `Fintech Pulse dossier: "${article.title}"`;
+    let url = "";
+    if (platform === "twitter") {
+      url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+    } else if (platform === "linkedin") {
+      url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+    }
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+    setActiveShareId(null);
   };
 
   // Calculator custom outputs
@@ -385,120 +312,34 @@ export default function App() {
     };
   }, [monthlyVolume, avgTicketSize, customCCRate, customRTPRate]);
 
-  // Dynamic Chart coordinate calculations
-  const chartPoints = CHART_HISTORY[chartTimeframe] || CHART_HISTORY["1W"];
-  
-  // Quick calculation variables for the dynamic chart layout
-  const chartDims = { width: 680, height: 280, paddingLeft: 45, paddingRight: 15, paddingTop: 20, paddingBottom: 30 };
-  const yMin = useMemo(() => {
-    const values = chartPoints.map((p) => p[chartAsset]);
-    return Math.max(0, Math.min(...values) - 10);
-  }, [chartAsset, chartPoints]);
-
-  const yMax = useMemo(() => {
-    const values = chartPoints.map((p) => p[chartAsset]);
-    return Math.max(...values) + 10;
-  }, [chartAsset, chartPoints]);
-
-  const svgCoordinates = useMemo(() => {
-    const pointsCount = chartPoints.length;
-    const { width, height, paddingLeft, paddingRight, paddingTop, paddingBottom } = chartDims;
-    
-    const usableWidth = width - paddingLeft - paddingRight;
-    const usableHeight = height - paddingTop - paddingBottom;
-
-    return chartPoints.map((p, idx) => {
-      // X axis step mapping
-      const x = paddingLeft + (idx / (pointsCount - 1)) * usableWidth;
-      // Y axis value scaling
-      const val = p[chartAsset];
-      const y = height - paddingBottom - ((val - yMin) / (yMax - yMin)) * usableHeight;
-      return { x, y, point: p };
-    });
-  }, [chartAsset, chartPoints, yMin, yMax, chartDims]);
-
-  // Render direct line path
-  const linePath = useMemo(() => {
-    if (svgCoordinates.length === 0) return "";
-    return svgCoordinates.map((c, i) => `${i === 0 ? "M" : "L"} ${c.x} ${c.y}`).join(" ");
-  }, [svgCoordinates]);
-
-  // Render direct gradient area filling path below line
-  const areaPath = useMemo(() => {
-    if (svgCoordinates.length === 0) return "";
-    const firstPoint = svgCoordinates[0];
-    const lastPoint = svgCoordinates[svgCoordinates.length - 1];
-    const bottomY = chartDims.height - chartDims.paddingBottom;
-    return `${linePath} L ${lastPoint.x} ${bottomY} L ${firstPoint.x} ${bottomY} Z`;
-  }, [svgCoordinates, linePath, chartDims]);
-
   return (
     <div className="min-h-screen bg-[#05070A] text-slate-100 antialiased selection:bg-blue-950 selection:text-blue-300" id="fintech-portal-root">
-      
-      {/* Dynamic Upper Ticker Ribbon */}
-      <div className="bg-[#05070A] text-slate-350 py-2.5 border-b border-slate-900 text-xs tracking-wider font-mono select-none overflow-hidden" id="ticker-ribbon">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center space-x-2 text-slate-500">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse inline-block"></span>
-            <span>LIVE FINTECH INDEX INDEXES:</span>
-          </div>
-          <div className="flex flex-1 items-center justify-end space-x-6 overflow-x-auto no-scrollbar scroll-smooth">
-            {tickers.map((ticker) => (
-              <div key={ticker.symbol} className="flex items-center space-x-2 shrink-0 transition-all duration-300" id={`ticker-${ticker.symbol}`}>
-                <span className="text-slate-500 font-semibold">{ticker.symbol}</span>
-                <span className="text-white font-medium">{ticker.price}</span>
-                <span className={`flex items-center text-[10px] px-1 font-bold rounded ${ticker.isPositive ? "text-emerald-400" : "text-rose-400"}`}>
-                  {ticker.isPositive ? <ArrowUpRight className="w-3 h-3 inline mr-0.5" /> : <ArrowDownRight className="w-3 h-3 inline mr-0.5" />}
-                  {ticker.change}%
-                </span>
-                {/* Micro mini-bar sparklines */}
-                <div className="w-10 h-3 flex items-end space-x-0.5 opacity-40">
-                  {ticker.history.map((h, hidx) => {
-                    const minH = Math.min(...ticker.history);
-                    const maxH = Math.max(...ticker.history);
-                    const ratio = maxH - minH > 0 ? (h - minH) / (maxH - minH) : 0.5;
-                    const blockHeight = Math.max(1, Math.round(ratio * 12));
-                    return (
-                      <span
-                        key={hidx}
-                        className={`w-1 rounded-sm ${ticker.isPositive ? "bg-emerald-400" : "bg-rose-400"}`}
-                        style={{ height: `${blockHeight}px` }}
-                      ></span>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Modern High-End Editorial Header with Liquidglass effect */}
       <header 
-        className={`sticky z-40 transition-all duration-500 ease-in-out ${
+        className={`sticky transition-all duration-500 ease-in-out z-40 ${
           isScrolled 
-            ? "top-0 left-0 right-0 w-full bg-[#05070a]/75 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_12px_40px_rgba(0,0,0,0.8)] py-0" 
+            ? "top-0 left-0 right-0 w-full py-0" 
             : "top-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4"
         }`} 
         id="main-navigation-header"
       >
-        <div className={`transition-all duration-500 ease-in-out relative ${
+        <div className={`transition-all duration-500 ease-in-out relative group overflow-hidden ${
           isScrolled 
-            ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 bg-transparent" 
-            : "rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-[#0b0e17]/35 backdrop-blur-md sm:backdrop-blur-xl shadow-[0_16px_48px_rgba(0,0,0,0.5),inset_0_1.5px_1.5px_0_rgba(255,255,255,0.08)] shadow-blue-900/5 hover:border-white/15 hover:shadow-blue-950/10 group overflow-hidden"
+            ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 bg-[#05070a]/80 backdrop-blur-3xl border-b border-white/[0.08] shadow-[0_12px_45px_rgba(0,0,0,0.8)]" 
+            : "rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-[#0b0e17]/35 backdrop-blur-md sm:backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1.5px_1.5px_0_rgba(255,255,255,0.08)] shadow-blue-900/5 hover:border-white/15 hover:shadow-blue-950/10"
         }`}>
-          {!isScrolled && (
-            <>
-              {/* Soft color flow inside the glass capsule */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/[0.03] via-indigo-500/[0.03] to-emerald-500/[0.03] rounded-2xl sm:rounded-3xl pointer-events-none"></div>
-              
-              {/* Micro neon top glare */}
-              <div className="absolute top-[1px] left-10 right-10 h-[1.5px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent blur-[0.5px] pointer-events-none"></div>
-              
-              {/* Glass gloss/reflection shimmer */}
-              <div className="absolute -inset-x-full top-0 bottom-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent transform -skew-x-12 transition-transform duration-1000 group-hover:translate-x-full pointer-events-none"></div>
-            </>
-          )}
+          {/* Shifting background liquid color flow and glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/[0.05] via-indigo-500/[0.03] to-emerald-500/[0.05] pointer-events-none"></div>
+          
+          {/* Micro neon top glare */}
+          <div className="absolute top-[1px] left-10 right-10 h-[1.5px] bg-gradient-to-r from-transparent via-blue-500/40 to-transparent blur-[0.5px] pointer-events-none"></div>
+          
+          {/* Gel-like gloss glow reflection layer */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.12),transparent_70%)] pointer-events-none"></div>
+
+          {/* Shimmer transition reflection bar */}
+          <div className="absolute -inset-x-full top-0 bottom-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent transform -skew-x-12 transition-transform duration-1000 group-hover:translate-x-full pointer-events-none"></div>
 
           <div className="flex items-center justify-between h-20 relative z-10 px-4 sm:px-6 md:px-8">
             {/* Elegant Typography Branding */}
@@ -510,7 +351,7 @@ export default function App() {
                 <h1 className="text-xl font-bold tracking-tight text-white font-sans flex items-center leading-none">
                   FINTECH <span className="text-blue-500 font-medium ml-1">PULSE</span>
                 </h1>
-                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-mono mt-1 font-semibold">Payments & Equities Intelligence</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-mono mt-1 font-semibold">Payments & Blockchains Intelligence</p>
               </div>
             </div>
 
@@ -603,36 +444,45 @@ export default function App() {
             <div className="space-y-6 relative z-10">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono tracking-widest text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded uppercase font-bold">
-                  Daily Pulse Index
+                  Today's Briefing
                 </span>
-                <TrendingUp className="w-5 h-5 text-blue-400" />
+                <BookOpen className="w-5 h-5 text-blue-400" />
               </div>
 
               <div>
                 <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-2 font-semibold">Today's Market Synthesis</h3>
-                <p className="text-sm text-slate-350 leading-relaxed font-sans">
-                  The payments routing infrastructure framework is experiencing its largest legislative strain in a generation. At the same time, liquid non-bank deposits seek record high stablecoin reserves yield pipelines.
+                <p className="text-sm text-slate-300 leading-relaxed font-sans">
+                  The payments routing infrastructure framework is experiencing its largest legislative strain in a generation. At the same time, liquid non-bank deposits seek secure digital wallet and stablecoin velocity pipelines.
                 </p>
               </div>
 
               <div className="space-y-3.5 bg-[#05070A]/55 p-4 rounded-xl border border-slate-800 font-mono text-xs">
-                <div className="flex justify-between items-center">
-                  <span className="text-slate-400">Stablecoin Market Velocity Index</span>
-                  <span className="text-emerald-400 font-semibold flex items-center">
-                    <ArrowUpRight className="w-3 h-3 mr-0.5" /> +15.4% YoY
-                  </span>
+                <div className="space-y-1">
+                  <div className="flex items-center font-bold space-x-1.5 text-blue-400">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
+                    <span>Stablecoin Velocities Shift</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 font-sans leading-normal pl-3">
+                    Merchant volume shifts from speculative pools to cross-border utility channels.
+                  </p>
                 </div>
-                <div className="flex justify-between items-center border-t border-slate-800/80 pt-2.5">
-                  <span className="text-slate-400">ACH / Instant RTP Volume Index</span>
-                  <span className="text-emerald-400 font-semibold flex items-center">
-                    <ArrowUpRight className="w-3 h-3 mr-0.5" /> +28.1% YTD
-                  </span>
+                <div className="space-y-1 border-t border-slate-800/80 pt-2.5">
+                  <div className="flex items-center font-bold space-x-1.5 text-blue-400">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                    <span>Sovereign A2A Expansion</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 font-sans leading-normal pl-3">
+                    Wero continues direct bank account integrations across Europe to rival card networks.
+                  </p>
                 </div>
-                <div className="flex justify-between items-center border-t border-slate-800/80 pt-2.5">
-                  <span className="text-slate-400">Card Interchange Fee Pressure Gauge</span>
-                  <span className="text-rose-400 font-semibold flex items-center">
-                    <ArrowDownRight className="w-3 h-3 mr-0.5" /> -4.2% MoM
-                  </span>
+                <div className="space-y-1 border-t border-slate-800/80 pt-2.5">
+                  <div className="flex items-center font-bold space-x-1.5 text-blue-400">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                    <span>Interchange Margin Pressures</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 font-sans leading-normal pl-3">
+                    Under CCCA legislative pressure, card processors plan secondary routing alternatives.
+                  </p>
                 </div>
               </div>
             </div>
@@ -642,260 +492,6 @@ export default function App() {
               <span className="text-emerald-400 font-bold flex items-center">
                 <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> MODERATELY BULLISH
               </span>
-            </div>
-          </div>
-        </section>
-
-
-        {/* INTERACTIVE MARKET PORTFOLIO TERMINAL & CHART CHART WIDGET */}
-        <section className="bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden" id="interactive-charts-portal">
-          <div className="border-b border-slate-800 bg-slate-950 p-5 sm:px-6 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center space-x-3">
-              <div className="p-2 bg-slate-900 text-white rounded-lg border border-slate-800">
-                <Layers className="w-5 h-5 text-blue-500" />
-              </div>
-              <div>
-                <h3 className="font-extrabold text-white tracking-tight">Interactive Fintech Market Index</h3>
-                <p className="text-xs text-slate-450 font-sans">Toggle indices to visualize daily momentum, sector volume, and rolling baseline records</p>
-              </div>
-            </div>
-
-            {/* Timeframe selector controls */}
-            <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 font-mono text-xs">
-              {["1D", "1W", "1M", "1Y"].map((tf) => (
-                <button
-                  key={tf}
-                  onClick={() => {
-                    setChartTimeframe(tf);
-                    setHoveredIndex(null);
-                    setHoveredPoint(null);
-                  }}
-                  className={`px-3 py-1.5 rounded-lg font-bold uppercase transition-all ${
-                    chartTimeframe === tf ? "bg-blue-600 text-white shadow-sm font-extrabold" : "text-slate-450 hover:text-white"
-                  }`}
-                >
-                  {tf}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12">
-            {/* Chart Left column Selector Sidebars */}
-            <div className="lg:col-span-3 border-r border-slate-800 p-4 space-y-2 bg-slate-950/40">
-              <span className="text-[10px] uppercase font-mono tracking-widest text-slate-500 font-bold block px-2.5 mb-2">SELECT INDEX GRAPH</span>
-              
-              {[
-                { key: "payments", name: "Core Payments Rail", sub: "Visa, Mastercard, Adyen Tracker", color: "bg-indigo-950/40 border-indigo-500/30 text-indigo-300", icon: CreditCard, val: "98.2" },
-                { key: "crypto", name: "Crypto Stablecoin Velocity", sub: "USDC, USDT, Layer-2 Settlement", color: "bg-emerald-950/40 border-emerald-500/30 text-emerald-300", icon: Coins, val: "125.4" },
-                { key: "wallets", name: "Digital Wallet Dominance", sub: "PayPal, Apple Pay, Clover Index", color: "bg-amber-950/40 border-amber-500/30 text-amber-300", icon: Landmark, val: "86.4" },
-                { key: "equities", name: "Integrated Fintech Equities", sub: "Sector ETF Benchmark", color: "bg-blue-950/40 border-blue-500/30 text-blue-300", icon: Cpu, val: "110.8" }
-              ].map((asset) => {
-                const IconComp = asset.icon;
-                const isSelected = chartAsset === asset.key;
-                return (
-                  <button
-                    key={asset.key}
-                    onClick={() => {
-                      setChartAsset(asset.key as any);
-                      setHoveredIndex(null);
-                      setHoveredPoint(null);
-                    }}
-                    className={`w-full text-left p-3.5 rounded-xl border transition-all duration-200 flex items-center justify-between ${
-                      isSelected 
-                        ? `${asset.color} shadow-sm font-semibold scale-[1.01] ring-1 ring-blue-500/20` 
-                        : "bg-slate-900/60 border-slate-800 hover:border-slate-705 hover:bg-slate-800 text-slate-350 select-none"
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-lg ${isSelected ? "bg-slate-900 shadow-sm text-white" : "bg-slate-800 text-slate-450"}`}>
-                        <IconComp className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold font-sans tracking-tight block text-slate-200">{asset.name}</p>
-                        <p className="text-[10px] text-slate-500 font-mono mt-0.5 leading-none">{asset.sub}</p>
-                      </div>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-slate-200">{asset.val}</span>
-                  </button>
-                );
-              })}
-
-              {/* Dynamic stats preview box inside sidebar */}
-              <div className="mt-4 p-4 rounded-xl bg-slate-950 text-slate-300 font-mono text-xs space-y-2.5 border border-slate-800/80">
-                <div className="flex justify-between">
-                  <span className="text-slate-500">Baseline Target:</span>
-                  <span>100.0</span>
-                </div>
-                <div className="flex justify-between border-t border-slate-800/80 pt-2">
-                  <span className="text-slate-505 text-slate-500">Current Level:</span>
-                  <span className="text-emerald-450 text-emerald-400 font-bold">
-                    {chartPoints[chartPoints.length - 1][chartAsset].toFixed(2)}
-                  </span>
-                </div>
-                <div className="flex justify-between border-t border-slate-800/80 pt-2">
-                  <span className="text-slate-500">Est. Daily Volume:</span>
-                  <span>${chartPoints[chartPoints.length - 1].volume}B</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Interactive Render Area Grid */}
-            <div className="lg:col-span-9 p-6 flex flex-col justify-between" id="chart-viewport-column">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h4 className="text-xs uppercase font-mono tracking-widest text-slate-500 font-bold">Chart Vector Line</h4>
-                  <p className="text-sm font-extrabold text-slate-250 text-slate-200 font-sans tracking-tight">
-                    {chartAsset.charAt(0).toUpperCase() + chartAsset.slice(1)} Performance Rating Trend
-                  </p>
-                </div>
-                
-                {/* Dynamically display point detail values on hover */}
-                <div className="text-right bg-slate-950 border border-slate-850 rounded-xl px-4 py-2 font-mono text-xs shadow-sm">
-                  {hoveredPoint ? (
-                    <div>
-                      <span className="text-slate-505 text-slate-550 text-slate-500 mr-2">{hoveredPoint.date} Index:</span>
-                      <span className="text-white font-extrabold text-sm">{hoveredPoint[chartAsset].toFixed(2)}</span>
-                      <span className="text-[10px] text-slate-500 block mt-0.5">Vol: ${hoveredPoint.volume}B</span>
-                    </div>
-                  ) : (
-                    <div className="text-slate-450 flex items-center">
-                      <Info className="w-3.5 h-3.5 mr-1 text-slate-500" />
-                      <span>Hover chart to scan timeline</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Responsive Custom Vector SVG Canvas Chart */}
-              <div className="relative w-full overflow-hidden bg-slate-950/60 rounded-2xl border border-slate-800/80 p-2 select-none h-72">
-                <svg
-                  viewBox={`0 0 ${chartDims.width} ${chartDims.height}`}
-                  className="w-full h-full"
-                  onMouseMove={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const scaleX = chartDims.width / rect.width;
-                    const mouseX = (e.clientX - rect.left) * scaleX;
-                    
-                    // Fine matching x index from list coordinate array mapping
-                    let closestIdx = 0;
-                    let minDistance = Infinity;
-                    svgCoordinates.forEach((coord, i) => {
-                      const dist = Math.abs(coord.x - mouseX);
-                      if (dist < minDistance) {
-                        minDistance = dist;
-                        closestIdx = i;
-                      }
-                    });
-                    
-                    setHoveredIndex(closestIdx);
-                    setHoveredPoint(svgCoordinates[closestIdx].point);
-                  }}
-                  onMouseLeave={() => {
-                    setHoveredIndex(null);
-                    setHoveredPoint(null);
-                  }}
-                >
-                  <defs>
-                    <linearGradient id="chartGlowOpacity" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.25" />
-                      <stop offset="100%" stopColor="#3B82F6" stopOpacity="0.0" />
-                    </linearGradient>
-                  </defs>
-
-                  {/* Horizontal Guideline indicators */}
-                  {Array.from({ length: 5 }).map((_, step) => {
-                    const h = chartDims.height - chartDims.paddingBottom;
-                    const t = chartDims.paddingTop;
-                    const y = t + (step / 4) * (h - t);
-                    const val = yMax - (step / 4) * (yMax - yMin);
-                    return (
-                      <g key={step} className="opacity-40">
-                        <line
-                          x1={chartDims.paddingLeft}
-                          y1={y}
-                          x2={chartDims.width - chartDims.paddingRight}
-                          y2={y}
-                          className="stroke-slate-800 stroke-1 stroke-dasharray-[4,4]"
-                          strokeDasharray="4 4"
-                        />
-                        <text
-                          x={chartDims.paddingLeft - 8}
-                          y={y + 3}
-                          textAnchor="end"
-                          className="fill-slate-500 font-mono text-[9px] select-none pointer-events-none"
-                        >
-                          {val.toFixed(0)}
-                        </text>
-                      </g>
-                    );
-                  })}
-
-                  {/* Shaded Area Zone */}
-                  <path d={areaPath} fill="url(#chartGlowOpacity)" className="transition-all duration-300" />
-
-                  {/* Dynamic Trend Core Vector Line */}
-                  <path
-                    d={linePath}
-                    fill="none"
-                    stroke="#3B82F6"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-all duration-300"
-                  />
-
-                  {/* Custom vertical focus line crosshair and marker */}
-                  {hoveredIndex !== null && (
-                    <g>
-                      <line
-                        x1={svgCoordinates[hoveredIndex].x}
-                        y1={chartDims.paddingTop}
-                        x2={svgCoordinates[hoveredIndex].x}
-                        y2={chartDims.height - chartDims.paddingBottom}
-                        className="stroke-slate-700 stroke-1 stroke-dasharray-[2,2]"
-                        strokeDasharray="2 2"
-                      />
-                      <circle
-                        cx={svgCoordinates[hoveredIndex].x}
-                        cy={svgCoordinates[hoveredIndex].y}
-                        r="6"
-                        fill="#3B82F6"
-                        className="stroke-slate-900 stroke-2"
-                      />
-                    </g>
-                  )}
-
-                  {/* Horizontal Timeline label coordinates */}
-                  {svgCoordinates.map((c, i) => {
-                    // Filter or condense coordinates to prevent overcrowding
-                    const shouldDisplay = chartTimeframe === "1D" ? i % 2 === 0 : true;
-                    if (!shouldDisplay) return null;
-                    return (
-                      <text
-                        key={i}
-                        x={c.x}
-                        y={chartDims.height - 10}
-                        textAnchor="middle"
-                        className="fill-slate-500 font-mono text-[9px] select-none pointer-events-none"
-                      >
-                        {c.point.date}
-                      </text>
-                    );
-                  })}
-                </svg>
-              </div>
-
-              {/* Chart footer insights summary block */}
-              <div className="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between flex-wrap gap-4 text-xs">
-                <span className="flex items-center text-slate-400">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block mr-2 shadow-sm"></span>
-                  Rolling 30D Growth Benchmark:
-                  <span className="text-emerald-405 text-emerald-400 font-bold ml-1.5">+8.42% overall gain</span>
-                </span>
-                
-                <span className="text-slate-500 font-mono block">Data refreshed every 4.5 seconds internally. No external feed delay.</span>
-              </div>
             </div>
           </div>
         </section>
@@ -962,12 +558,66 @@ export default function App() {
                           {article.category}
                         </span>
                         
-                        <div className="flex items-center space-x-2">
-                          <span className="flex items-center"><Clock className="w-3 h-3 mr-0.5 text-slate-500 animate-pulse" /> {article.readTime}</span>
+                        <div className="flex items-center space-x-1.5 relative">
+                          <span className="flex items-center mr-1 text-[11px]"><Clock className="w-3 h-3 mr-0.5 text-slate-500 animate-pulse" /> {article.readTime}</span>
+                          
+                          {/* Share button with dropdown */}
+                          <div className="relative">
+                            <button
+                              onClick={(e) => handleShareClick(article.id, e)}
+                              className={`text-slate-500 hover:text-white p-1 hover:bg-slate-800 rounded-md transition-colors relative flex items-center justify-center ${activeShareId === article.id ? 'text-white bg-slate-800' : ''}`}
+                              title="Share this article"
+                              id={`share-btn-${article.id}`}
+                            >
+                              <Share2 className="w-3.5 h-3.5" />
+                            </button>
+
+                            {/* Share Dropdown Overlay */}
+                            {activeShareId === article.id && (
+                              <div 
+                                onClick={(e) => e.stopPropagation()} 
+                                className="absolute right-0 top-7 w-48 bg-slate-950/95 backdrop-blur-md rounded-xl border border-slate-800 p-1.5 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.6)] z-30 animate-fade-in text-xs font-sans text-slate-300 pointer-events-auto"
+                                id={`share-dropdown-${article.id}`}
+                              >
+                                <div className="px-2 py-1.5 border-b border-slate-900 mb-1 text-[10px] text-slate-500 font-mono uppercase tracking-wider">
+                                  Share Dossier
+                                </div>
+                                <button
+                                  onClick={(e) => handleShareSocial(article, "twitter", e)}
+                                  className="w-full text-left px-2 py-1.5 rounded-lg hover:bg-white/[0.05] hover:text-white transition-all flex items-center space-x-2"
+                                >
+                                  <Twitter className="w-3.5 h-3.5 text-sky-400" />
+                                  <span>Share on X</span>
+                                </button>
+                                <button
+                                  onClick={(e) => handleShareSocial(article, "linkedin", e)}
+                                  className="w-full text-left px-2 py-1.5 rounded-lg hover:bg-white/[0.05] hover:text-white transition-all flex items-center space-x-2"
+                                >
+                                  <Linkedin className="w-3.5 h-3.5 text-blue-400" />
+                                  <span>Share on LinkedIn</span>
+                                </button>
+                                <button
+                                  onClick={(e) => handleCopyLink(article, e)}
+                                  className="w-full text-left px-2 py-1.5 rounded-lg hover:bg-white/[0.05] hover:text-white transition-all flex items-center justify-between"
+                                >
+                                  <div className="flex items-center space-x-2 font-sans">
+                                    {copiedId === article.id ? (
+                                      <Check className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                                    ) : (
+                                      <Copy className="w-3.5 h-3.5 text-slate-400" />
+                                    )}
+                                    <span>{copiedId === article.id ? "Copied Link!" : "Copy Link"}</span>
+                                  </div>
+                                </button>
+                              </div>
+                            )}
+                          </div>
+
                           <button
                             onClick={(e) => toggleBookmark(article.id, e)}
-                            className="text-slate-505 text-slate-500 hover:text-slate-250 hover:bg-slate-800 p-1 rounded-md transition-colors"
+                            className="text-slate-505 text-slate-500 hover:text-white hover:bg-slate-800 p-1 rounded-md transition-colors"
                             title="Bookmark this post"
+                            id={`bookmark-btn-${article.id}`}
                           >
                             {isFavorite ? <BookmarkCheck className="w-3.5 h-3.5 text-blue-400" /> : <Bookmark className="w-3.5 h-3.5" />}
                           </button>
@@ -1256,7 +906,7 @@ export default function App() {
         {/* DETAILED ARTICLE EXPANDED DRAWER/MODAL POPUP OVERLAY */}
         {selectedArticle && (
           <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" id="article-detail-modal">
-            <div className="bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-800 flex flex-col animate-fade-in animate-duration-200">
+            <div id="article-modal-scrollable-content" className="bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-800 flex flex-col animate-fade-in animate-duration-200">
               
               {/* Header section with interactive close controller */}
               <div className="sticky top-0 bg-slate-900 border-b border-slate-800 p-5 flex items-center justify-between z-10">
@@ -1289,7 +939,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="space-y-4 text-slate-305 text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
+                <div className="space-y-4 text-slate-350 text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
                   {selectedArticle.content.map((paragraph, pIdx) => (
                     <p key={pIdx}>{paragraph}</p>
                   ))}
@@ -1317,7 +967,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="p-4 bg-slate-955 bg-slate-950 text-slate-300 border border-slate-850 rounded-xl space-y-2">
+                  <div className="p-4 bg-slate-950 text-slate-300 border border-slate-850 rounded-xl space-y-2">
                     <h5 className="font-bold text-white uppercase tracking-widest">Macro Catalysts To Watch</h5>
                     <ul className="space-y-1 list-disc list-inside text-[11px] text-slate-400">
                       {selectedArticle.catalysts.map((cat, cIdx) => (
@@ -1326,6 +976,66 @@ export default function App() {
                     </ul>
                   </div>
                 </div>
+
+                {/* Recommended For You Section */}
+                <div className="pt-6 border-t border-slate-800 space-y-4" id="recommended-dossiers-section">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider font-mono flex items-center">
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 animate-pulse inline-block"></span>
+                        Recommended For You
+                      </h4>
+                      <p className="text-[11px] text-slate-500 font-sans mt-0.5">Report dossiers linked by shared thematic policy pillars</p>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-500 bg-slate-950 px-2.5 py-1 rounded border border-slate-850" id="recommended-matches-count">
+                      {recommendedArticles.length} {recommendedArticles.length === 1 ? "match" : "matches"} found
+                    </span>
+                  </div>
+
+                  {recommendedArticles.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" id="recommended-articles-grid">
+                      {recommendedArticles.map((recArticle) => {
+                        const sharedTags = selectedArticle.tags.filter(tag => recArticle.tags.includes(tag));
+                        return (
+                          <div 
+                            key={recArticle.id}
+                            id={`recommended-card-${recArticle.id}`}
+                            onClick={() => setSelectedArticle(recArticle)}
+                            className="bg-slate-950/40 hover:bg-slate-950/90 border border-slate-850 hover:border-blue-500/40 rounded-2xl p-4 transition-all duration-300 cursor-pointer group flex flex-col justify-between space-y-3 shadow-md hover:shadow-blue-500/5 select-none"
+                          >
+                            <div className="space-y-1.5">
+                              <div className="flex justify-between items-center text-[10px] font-mono">
+                                <span className="text-blue-500 font-bold uppercase tracking-wider">{recArticle.category}</span>
+                                <span className="text-slate-500">{recArticle.readTime}</span>
+                              </div>
+                              <h5 className="text-sm font-bold text-slate-200 group-hover:text-blue-400 transition-colors line-clamp-2 leading-snug">
+                                {recArticle.title}
+                              </h5>
+                            </div>
+
+                            <div className="pt-2 border-t border-slate-900/60 flex items-center justify-between text-[9px] font-mono">
+                              <div className="flex flex-wrap gap-1 max-w-[70%]">
+                                {sharedTags.slice(0, 2).map((tag, tIdx) => (
+                                  <span key={tIdx} className="text-blue-400 bg-blue-950/30 px-1.5 py-0.5 rounded text-[8px] tracking-tight">
+                                    #{tag}
+                                  </span>
+                                ))}
+                              </div>
+                              <span className="text-slate-500 shrink-0">
+                                {sharedTags.length} shared {sharedTags.length === 1 ? "tag" : "tags"}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="bg-slate-950/20 border border-dashed border-slate-850 rounded-2xl p-6 text-center" id="no-recommendations-placeholder">
+                      <p className="text-xs text-slate-500 font-sans">No other dossiers match the required thematic policy indicators at this time.</p>
+                    </div>
+                  )}
+                </div>
+
               </div>
 
               {/* Sticky bottom modal actions block */}
@@ -1363,7 +1073,7 @@ export default function App() {
                 FINTECH <span className="text-blue-500 font-medium ml-1">PULSE</span>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed font-sans mt-2">
-                Next-generation daily coverage, analysis charts, and institutional blueprints for payments, cryptocurrencies, stablecoin transfer velocities, and equity performance.
+                Next-generation daily coverage, analysis charts, and institutional blueprints for payments, cryptocurrencies, and stablecoin transfer velocities.
               </p>
             </div>
 
@@ -1373,7 +1083,6 @@ export default function App() {
                 <li><a onClick={() => setSelectedCategory(FintechCategory.PAYMENTS)} className="hover:text-blue-400 hover:underline cursor-pointer transition-colors">Payments Routing</a></li>
                 <li><a onClick={() => setSelectedCategory(FintechCategory.CRYPTO)} className="hover:text-blue-400 hover:underline cursor-pointer transition-colors">Digital Blockchains</a></li>
                 <li><a onClick={() => setSelectedCategory(FintechCategory.WALLETS)} className="hover:text-blue-400 hover:underline cursor-pointer transition-colors">Digital Wallets & A2A</a></li>
-                <li><a onClick={() => setSelectedCategory(FintechCategory.EQUITIES)} className="hover:text-blue-400 hover:underline cursor-pointer transition-colors">Fintech Equities</a></li>
               </ul>
             </div>
 
